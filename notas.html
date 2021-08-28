@@ -1,0 +1,168 @@
+<NOTAS DE CSS>
+<SELECTORES>
+		UNIVERSAL * <MODIFICA ABSOLUTAMENTE TODO>
+		DE TIPO <SE SELECCIONA POR ELEMENTO, H1, BOTON, INPUT>
+		CLASES <class en atributo y en css .class>
+		ID <id = "nombre" y en css es #>
+		POR ATRIBUTO <dalto = "estojaja" y en css entre []>
+		DESCENDIENTE <TODOS LOS Ps QUE ESTEN DENTRO DE UN H2 por ejemplo. Y en css h2 p. PUEDE ESTAR DOS O TRES O CUATRO O n DENTRO DE>
+			<.div-class h2 p span b> todos los b que estan dentro de los span dentro de p dentro de h2 dentro de la clase div-class
+		PSEUDOCLASES <HOVER ES EL MAS COMUN, CUANDO PASE SOBRE><h2:hover><cuando pase el mas sobre h2 o clase o id se pone rojo> 
+<ESPEFICIDAD>
+	ES UN TIPO DE JERARQUIA
+	    !important <color: red !important>
+	    ESTILOS EN LINEA 
+	    IDENTIFICADORES
+	    CLASES, PSEUDOCLASES, ATRIBUTOS
+	    ELEMENTOS
+	    PSEUDOELEMENTOS	     
+<METODOLOGIA BEM>
+	COMO METODOLOGIA CAMELLO. APARTIR DEL NOMBRE DE LAS CLASES 
+		ejemplo 
+		<div class="contact-form">
+			<input type="text" class="contact-form__input--active">
+			<input type="text" class="contact-form__input">
+			<input type="text" class="contact-form__input">
+			<input type="text" class="contact-form__input">
+			<input type="password" class="contact-form__input">			
+		</div>
+	EL EN CSS
+		.contact-form__input--active{
+			color: red;
+		}
+<TEORIA DE LAS MEDIDAS>
+	RELATIVAS Y FIJAS 
+		FIJAS 
+		font-size: 50px
+
+		RELATIVAS 
+		font-size: 5em
+
+		<EM>
+		<1 em por defecto son 16 px>
+		En el contenedor se le da el valor de em. font-size: 20px. Aqui se le cambia el valor a em de 20px
+		todo lo que trabaje con medidas no solo font-size
+		<VW & VH>
+			width: 50vw;
+			height: 50vh;
+			VH VW ES CON RESPECTO A TODA LA PANTALLA
+<PROPIEDADES DE LA TIPOGRAFIA>
+	TIPOS
+		font-size: 2em;
+		font-family: Georgia; 
+		line-height: 2; (las lineas que ocupa un letra)
+		font-weight: 100; grosor de letra 
+		font-decoration: none -> Quita el subrayado entre otras cosas me imagino 
+
+		Exportar tipografias: google fonts
+<NORMALIZE>
+	CON ESTE ARCHIVO DE LO QUE NOS ENCARGAMOS ES DE RESETEAR LOS ESTILOS EN HTML 
+	POSTERIOR A ELLO PODEMOS COMENZAR A MODIFICAR NUESTROS ESTILOS 
+
+<TEORIA DE CAJAS>
+	CAMBIAR PROPIEDADES DE LINEA A BLOQUE CON DISPLAY 
+		h2{
+			display: inline; 
+		}
+	A LOS ELEMENTOS QUE OCUPAN TODO EL DISPLAY SE LES PUEDE DAR HEIGHT A LOS EN LINEA NO
+<PROPIEDADES DE LAS CAJAS>
+	background-color: #a22;
+	display: inline-block; se reduce al tamaño de la palabra pero se le puede dar width y height 
+	padding: 10px 20px 30px 40px; distancia entre el texto y el borde del contenedor
+	height: 300px;
+	width: 300px;
+	box-sizing: border-box o content-box; para saber si se mantiene el width o el heigth o es el width y el heigth mas el padding.
+	text-aling: center;
+		CONTENT <CAJA + BORDE>
+		BORDER <CAJA-BORDE>
+	margin: 10px 10px 10px 10px;
+	(margin: auto;)
+	border-radius: 20px;
+	border: 4px solid blue;
+	box-shadow: 2px (ejex) 4px (eje y) 15px(desenfoque) 0 (borde) #000
+	text-shadow: 2px 2px 7px #fff
+	transform: rotate(90deg);
+	opacity: de 0 a 1
+<OUTLINE>
+	NO OCUPA ESPACIO, ES COMO UN BORDE SOBREESCRITO EN LO QUE HAY, DELANTE DEL TEXTO.
+	outline: 10px solid blue; 
+<POSITION>
+
+		STATIC <VALOR POR DEFECTO>
+		RELATIVE <MANTIENE SU ESPACIO EN PANTALLA Y APARTIR DE AHI CON LAS POSICIONES ADQUIRIDAS TOP, RIGTH, LEFT AND BUTTOM SE MUEVE>
+		<TAMBIEN ADQUIERE ZINDEX>
+		ABSOLUT <CON ABSOLUT AUTOMATICAMENTE TODOS LOS BLOQUES SE AJUSTAN AL TAMAÑO DEL CONTENIDO. POR DEFAULT SU POSICION CONMIENZA EN DONDE ESTA DECLARADO, PERO SI SE LE ASIGNA VALOR A TOP, BUTTOM, ETC, COMIENZA A PARTIR DE DONDE ESTE CONTENIDO EN LA PANTALLA TOTAL, SOLO SI UN CONTENEDOR TIENE POSICION RELATIVE SE LE PODRA TOMAR COMO PUNTO DE REFERENCIA>
+
+		FIXED <IGUAL QUE ABSOLUTE, PERO QUEDA FIJADO como barra de navegacion>
+		STICKY <MEZCLA ENTRE EL RELATIVE Y EL FIXED><SE COMPORTA COMO UN FIXED EN EL MOMENTO EN QUE LLEGAMOS A ESA PARTE DE EL SCROLL>
+
+<ZINDEX>
+	NOS MARCA LA POSICION DE ELEMENTOS UNO SOBRE OTRO ENTRE MAYOR SEA EL VALOIR DE Z INDEX VA MAS ADELANTE, ESTO, ENTRE CONTENEDORES HERMANOS
+
+	SIN EMBARGO EXISTE UN CONFLICTO ENTRE PADRES E HIJOS, PARA SOLUCIONARLO SE DEBE DE PONER UN <-1> EN ZINDEX AL HIJO Y NO DEFINIDO AL PADRE
+
+<DISPLAY>
+		NONE: OCULTA UN ELEMENTO
+		BLOCK <ELEMENTOS QUE RECUBREN TODO>
+		INLINE <ELEMENTOS QUE OCUPAN SOLO EL TAMAÑO DEL CONTENIDO>
+
+		INLINE-BLOCK <LE DA LA PROPIEDAD DE INLINE A UN BLOCK MIENTRAS QUE SE LE PUEDE DAR PROPIEDADES DE WEIDTH Y HEIGHT>
+		FLEX
+		GRID
+
+		INLINE-FLEX
+		INLINE-GRID
+<OVERFLOW>
+	SI HAY DESBORDAMIENTO, CON AUTO, NOS DA UN SCROLL
+	CON SCROLL SI O SI PONE UN SCROLL;
+
+	PUEDE SER OVERFLOW-Y O -X
+
+	VISIBLE, HIDDEN, AUTO, SCROLL
+<FLOAT>
+	ES UN TIPO DE EN WORD "ALINEADO CON LA IMAGEN " RIGTH, LEFT, NONE, INHERIT
+<PSEUDOELEMENTOS>
+	FIRST-LINE | NO FUNCIONA EN INLINE
+		.clase::first-line
+		<PRIMERA LINEA RESPONSIVE>
+	::FIRST.LETTER
+		<PRIMERA LETRA>
+	::PLACEHOLDER<TEXTO DE FONDO EN UN INPUT TEXT>
+	::SELECTION<LO QUE SELECCIONO CON EL CURSOR>
+	::AFTER Y BEFORE <CONTENIDO ANTES Y DESPUES DEL ELEMENTO, NO SE PUEDE SELECCIONAR Y DEBE DE TENER CONTENT ="ALGO" EN EL CSS ELEMENTOS INLINE>
+<PSEUDOCLASES>
+	:hover -> CUANDO EL MOUSE ESTA SOBRE HAS ESTO
+	:link -> Cuando un click no ah sido presionado aun
+	:visited -> Cuando el link ya se visito
+	:active -> FUNCIONA SOLO MIENTRAS SE ESTA PRESIONANDO EL ELEMENTO 
+	:focus -> Enfocado en lso input, cuando se va a escribir dentro cambia el estilo
+	:lang(en, es) -> lo que esta en cierto idioma lo modifica
+<OBJECT-FIT>
+	SOBRE TODO PARA IMAGENES 
+	object-fit: contain -> la imagen se ajusta al contenedor y se centra
+				cover -> la imagen se ajusta al tamaño del contenedor rellenandolo
+				none: no hace nada en realidad la monta como sea, resoluciones originales 
+				scale-down -> deja el que es mas chico si el contenedor o la imagen entre containt o none
+<OBJECT-POSITION>
+	object-position: left, rigth, top, buttom; que parte de la imagen predomina mas cuando solo se esta mostrando una parte en especifico de la imagen. Tambien se puede poner 1 em 2 em etc para recorrer la imagen;
+<CURSOR>
+	Cambiar el cursor cuando esta sobre un objeto, lo añadimos como propiedad del elemento. 
+
+	cursor: pointer;
+	cursor
+<COLORES>
+	COLOR NAME. 
+	HEXADECIMAL  (#RGB, #RRGGBB, #RGBA, #RRGGBBAA)
+	RGB (0,0,0) NEGRO
+	RGBA (0,0,0,.5) NEGRO CON OPACIDAD
+<MOBILE FIRST & RESPONSIBLE DESIGN>
+	@media only screen and (max-width: 1025px) {
+		div{
+			display: block;
+			width: 100%;
+		}
+	}
+<REFERENCIAS>
+	.clase:hover > a {
+	}
+	<CUANDO PASES EL MOUSE SOBRE LOS ELEMENTOS DE LA CLASE VAS A MODIFICAR LOS ELEMENTOS A DE LA SIGUEINTE MANERA>
