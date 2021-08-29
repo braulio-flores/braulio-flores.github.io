@@ -1,13 +1,10 @@
+$(document).ready(function(){ 
+    
+});
 
-class animal {
-	animal(especie,edad,color){
-		this.especie = especie;
-		this.edad = edad;
-		this.color = color;
-	}
-}
+        
+$("#close-alert-dev").on("click",function(){
+    $("#alerta-desarrollo").fadeToggle(1000);
+});
 
-const perro  = new animal("perro",5,"red");
-
-// document.write("hola");
-document.write(perro.especie);
+    

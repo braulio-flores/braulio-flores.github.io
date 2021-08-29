@@ -141,6 +141,35 @@ nav li a i{
     color: #fff;
 }
 
+.alerta-desarrollo{
+    bottom: 20px;
+    position: fixed;
+    z-index: 1000;
+    right: 10px;
+    background: var(--color-main);
+    color: var(--color-second);
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 40vw;
+}
+
+.alerta-desarrollo p,i{
+    color:var(--color-second);
+    font-size: 15px;
+}
+
+.close{
+    position: absolute;
+    top: -5px;
+    right: 10px;
+    background: var(--color-main);
+    border-radius: 100%;
+}
+
+.close:hover{
+    cursor: pointer;
+}
+
 .principal {
     display: inline-flex;
     height: 100vh;
