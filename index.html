@@ -2,25 +2,28 @@
 <html>
 <head>
     <title>braulio flores</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <link rel="stylesheet" type="text/css" href="normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css" media="screen">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap" rel="stylesheet">
     <link  rel="icon"   href="Images/bf.png" type="image/png" />
-    
-
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 <body>
     <nav>
         <div class="flex-ul-nav">
             <div class="logo"><p>Braulio Flores|</p></div>
+
             <ul>
                 <!-- <li><a href="#principal"><i class="fas fa-solid fa-laptop-code"></i> braulio flores</a></li> -->
-                <li><a href="#tecnologias"><i class="fas fa-solid fa-code"></i> tecnologias</a></li>
-                <li><a href=""><i class="fas fa-solid fa-laptop-code"></i> contacto</a></li>
+                <li class="ul-responsive-burger"><a><i class="fas fa-solid fa-bars"></i></a></li>
+                <li class="ul-responsive"><a href="#tecnologias"><i class="fas fa-solid fa-code"></i> tecnologias</a></li>
+                <li class="ul-responsive"><a href=""><i class="fas fa-solid fa-laptop-code"></i> contacto</a></li>
             </ul>
         </div>
     </nav>
@@ -45,7 +48,22 @@
         <p>Me encuentro constantemente trabajando para mejorar tu experiencia dia con dia y me puedas conocer más.</p>
     </div>
 
-     <div class="tecnologias" id="tecnologias">
+    <div class="sobre-mi apartados">
+        <h2 class="titulos">sobre mi</h2>
+          
+        <div class="mi-info">
+            Soy Braulio Flores, estudiante de ingenieria en Informatica, me gusta el desarrollo web y seguir aprendiendo constantemente. 
+            <a class="CV" target="_blank" href="Images/CV.pdf" download="Reporte2Mayo2010">
+                Descarga mi CV
+            </a>
+        </div>
+        <div class="foto-sobre-mi">
+            <!-- <img src="Images/profile.jpg"> -->
+            <img src="Images/profile.jpg"  alt="Braulio Flores">
+        </div>
+    </div>
+
+     <div class="tecnologias apartados" id="tecnologias">
         <h2 class="titulos">tecnologias</h2>
         <div class="elementos">
             <div class="icono">
@@ -75,13 +93,15 @@
         </div>
     </div>
 
-   <!--  <footer>
+    <!-- <footer>
         braulio flores<br>
         desarrollador web
         <h4>braulio flores</h4>
         <p>desarrollador web</p>
 
-    </footer>  -->
+    </footer> --> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/jscript.js"></script>
 </body>
 </html>
+

@@ -9,6 +9,9 @@ body{
 }
 
 /*ESTILOS PARA EL SCROLLBAR*/
+a{
+    text-decoration: none;
+}
 
 body::-webkit-scrollbar {
     -webkit-appearance: none;
@@ -51,7 +54,8 @@ body::-webkit-scrollbar-track {
 nav{
 	background: var(--color-main);
 	width: 100%;
-	height: 70px;
+	height: 10vh;
+    /*height: 70px;*/
 	position: fixed;
 	top:0px;
 	left: 0px;
@@ -75,7 +79,7 @@ nav{
     display: flex;
     align-content: center;
     font-size: 10px;
-    padding-left: 40px;
+    padding-left: 20px;
 }
 
 .logo p{
@@ -83,6 +87,7 @@ nav{
     font-size: 15px;
     align-self: center;
 }
+
 .logo p:before, .h1-title:before{
     content: "<";
 }
@@ -132,8 +137,30 @@ nav li a{
 	font-size: 12px;
     color: var(--color-second);
     font-weight: 900;
-    text-decoration: auto;
     padding: 9px;
+}
+
+.ul-responsive-burger{
+    display: none;
+}
+
+@media only screen and (max-width: 480px){
+    .ul-responsive{
+        display: none;
+    }
+    .ul-responsive-burger{
+        display: inline-flex;
+    }
+    /*nav li a{
+        font-size: 25px !important;
+    }
+    nav li a i{
+        font-size: 28px;
+        color: #fff;
+    }
+    .logo p{
+        font-size: 30px;
+    }*/
 }
 
 nav li a i{
@@ -146,11 +173,11 @@ nav li a i{
     position: fixed;
     z-index: 1000;
     right: 10px;
-    background: var(--color-main);
+    background: var(--color-fourth);
     color: var(--color-second);
     padding: 15px;
     border-radius: 10px;
-    max-width: 40vw;
+    max-width: 60vw;
 }
 
 .alerta-desarrollo p,i{
@@ -164,10 +191,12 @@ nav li a i{
     right: 10px;
     background: var(--color-main);
     border-radius: 100%;
+    transition: color .5s;
 }
 
 .close:hover{
     cursor: pointer;
+    color: #f55;
 }
 
 .principal {
@@ -195,6 +224,8 @@ nav li a i{
 
 .main-content{
 	/*padding: 0px 0px 70px 140px;*/
+    display: flex;
+    flex-direction: column;
 }
 
 .profile{
@@ -212,9 +243,37 @@ nav li a i{
     filter:grayscale(50%)
 }
 
+@media screen and (max-width: 900px){
+    .h1-title{
+        font-size: 50px;
+    }
+    .p-index{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .h1-title{
+        font-size: 30px;
+    }
+    .p-index{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .h1-title{
+        font-size: 15px;
+    }
+    .p-index{
+        font-size: 10px;
+        margin-left:-15px !important;
+    }
+}
 
 .h1-title{
-	backdrop-filter:blur(30px);
+	/*backdrop-filter:blur(30px);*/
+    background: var(--color-fourth);
     padding: 10px 25px 10px 25px;
     border-radius: 20px;
     display: inline-block;
@@ -225,7 +284,7 @@ nav li a i{
     color: var(--color-second);
     margin: 5px 20px 5px 0px;
     border-radius: 10px;
-    font-size: 70px;
+    /*font-size: 70px;*/
 
 }
 .h1-title:after,.h1-title:before{
@@ -267,13 +326,16 @@ nav li a i{
 
 
 .tecnologias{
-	/*position: relative;*/	
-	text-align: center;
-	padding-top: 90px;
+    background: linear-gradient(45deg,var(--color-main),transparent);
+}
+
+.apartados{
+    /*position: relative;*/ 
+    text-align: center;
+    padding-top: 12vh;
     height: 100vh;
     padding-left: 20px;
     padding-right: 20px;
-    /*background: linear-gradient(45deg,var(--color-main),transparent);*/
 }
 
 .titulos{
@@ -306,7 +368,14 @@ nav li a i{
     align-items: center;
     justify-items: center;
     font-size: 40px;
+    border:1px solid transparent;
 }
+
+.icono:hover{
+    /*border:1px solid var(--color-third);*/
+    box-shadow: 0px 0px 2px 1px var(--color-third);
+}
+
 @media screen and (max-width: 815px){
     .icono{
         flex-basis: 180px;
@@ -327,4 +396,39 @@ nav li a i{
 footer{
 	position: absolute;
 	top: 200vh;
+}
+
+.foto-sobre-mi{
+    border-radius: 50%;
+    width: 260px;
+    height: 260px;
+    margin: auto;
+}
+
+.foto-sobre-mi img{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mi-info{
+    background: var(--color-fourth);
+    color: var(--color-second);
+    padding: 20px;
+    margin: 10px 0px 50px 0px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.mi-info a{
+    position: absolute;
+    background: var(--color-third);
+    padding: 10px;
+    border-radius: 10px;
+    bottom: -30px;
+    margin: auto;
+    width: fit-content;
+    left: 0px;
+    right: 0px;
 }
